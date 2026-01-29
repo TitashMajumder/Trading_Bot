@@ -29,5 +29,6 @@ Limit Order:
 python cli.py --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price 50000
 Logs
 ```
-Logs are stored in logs/bot.log
+
+- Logs are stored in logs/bot.log
 ---
