@@ -1,6 +1,9 @@
 ## Binance Futures Testnet Trading Bot
 A CLI-based Python trading bot for Binance USDT-M Futures Testnet supporting Market and Limit orders with proper validation, structured logging, and error handling.
 
+### What is CLI?
+A CLI is a command-line interface that allows users to interact with an application using textual commands. In my project, the CLI parses user input and delegates execution to the core business logic.
+
 ### Features
 - Market & Limit order placement
 - BUY / SELL support
