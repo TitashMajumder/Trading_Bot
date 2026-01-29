@@ -1,33 +1,55 @@
-## Binance Futures Testnet Trading Bot
+Binance Futures Testnet Trading Bot
 
-### Features
-- Market & Limit orders
-- BUY / SELL support
-- Binance USDT-M Futures Testnet
-- CLI-based input
-- Structured logging
-- Robust validation & error handling
-- Logs are stored in logs/bot.log
+A CLI-based Python trading bot for Binance USDT-M Futures Testnet supporting Market and Limit orders with proper validation, structured logging, and error handling.
 
-### Setup
-1. Create Binance Futures Testnet account
-2. Generate API keys
-3. Create `.env` file with credentials
-4. Install dependencies
+Features
 
-```
+Market & Limit order placement
+
+BUY / SELL support
+
+Binance USDT-M Futures Testnet integration
+
+CLI-based input using argparse
+
+Structured logging of requests, responses, and errors
+
+Robust validation and exception handling
+
+Logs stored in logs/bot.log
+
+Setup
+
+Create a Binance Futures Testnet account
+https://testnet.binancefuture.com
+
+Generate Futures Testnet API keys (enable Futures permission)
+
+Create a .env file in the project root:
+
+BINANCE_API_KEY=your_api_key
+BINANCE_API_SECRET=your_api_secret
+
+Install dependencies:
+
 pip install -r requirements.txt
-```
-
 Run Examples
+Market Order
+python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.003
+Limit Order
+python cli.py --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.003 --price 90000
 
-Market Order:
-```
-python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
-```
-Limit Order:
-```
-python cli.py --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price 50000
+Note: Binance Futures enforces minimum notional value and price band rules.
+Quantities and prices should comply with exchange constraints.
+
 Logs
-```
----
+
+All API requests, responses, and errors are logged to:
+
+logs/bot.log
+
+The log file includes entries for:
+
+One Market order
+
+One Limit order
